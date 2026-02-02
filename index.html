@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine?</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 120px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 30px;
+      margin: 20px;
+      cursor: pointer;
+    }
+
+    #noBtn {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Sachin, will you be my Valentine? ❤️</h1>
+
+  <button onclick="yesClicked()">Yes</button>
+  <button id="noBtn" onmouseover="moveNo()">No</button>
+
+  <script>
+    function yesClicked() {
+      // WhatsApp link now says: Yes Isha, I'll be your Valentine
+      window.location.href =
+        "https://wa.me/?text=Yes%20Isha%2C%20I%27ll%20be%20your%20Valentine%20❤️";
+    }
+
+    function moveNo() {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 120);
+      document.getElementById("noBtn").style.left = x + "px";
+      document.getElementById("noBtn").style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
+
